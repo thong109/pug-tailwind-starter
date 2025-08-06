@@ -23,7 +23,7 @@
 }
 
 .bg-arrow {
-  @apply bg-primary/90 before:block before:content-[''] before:left-1/2 before:-translate-x-1/2 before:top-[-4px] before:absolute before:w-[8px] before:h-[4px] before:bg-[url('../images/icon-arrow-menu-purple.png')] bg-no-repeat bg-[left_center];
+  @apply bg-primary/90 before:block before:content-[''] before:left-1/2 before:-translate-x-1/2 before:top-[-4px] before:absolute before:w-[8px] before:h-[4px] before:bg-[url('../images/icon-arrow-menu-purple.png')] bg-no-repeat bg-[left_center] z-10;
 }
 
 .no-before {
