@@ -1,17 +1,6 @@
 header.w-full
-  .bg-primary.w-full.flex.justify-end(class="md:block")
-    .justify-between.items-center.wrapper.hidden(class="md:flex")
-      ul.flex.items-center.text-sm.list-none
-        li.bg-dot
-          a.text-white.space-1.no-before Tin tức &amp; Sự kiện
-        li.bg-dot
-          a(href="#").text-white.space-1 Thông báo
-        li.bg-dot
-          a(href="#").text-white.space-1 Góc chia sẻ
-        li.bg-dot
-          a(href="#").text-white.space-1 Văn bản - Tài liệu pháp luật
-        li.bg-dot
-          a(href="#").text-white.space-1 Lịch tuần
+  .bg-primary.w-full.flex.justify-end.hidden(class="sm:block")
+    .justify-end.items-center.wrapper.hidden(class="sm:flex")
       div.flex.items-center(class="gap-[8px]")
         ul.flex.items-center(class="gap-[4px]")
           li
@@ -65,7 +54,19 @@ header.w-full
             a(href="" class="w-[20px] h-[14px] px-1 mb-[7px]").text-sm.bg-white.inline-flex.justify-center.items-center.rounded-sm EN
           li 
             a(href="" class="w-[20px] h-[14px] px-1 mb-[7px]").text-sm.bg-white.inline-flex.justify-center.items-center.rounded-sm VI
-    button#menuToggle(class="md:hidden p-2 text-white bg-[#003d77] ")
+  div.wrapper.flex.justify-between.items-center
+    .flex.items-center.gap-3
+      div.flex-shrink-0
+        img(src=imgCommonPC+"cropped-it_logo.png" class="w-[60px] md:w-auto" alt="")
+      .flex.flex-col
+        p.uppercase.font-bold(class="md:text-base text-sm") Trường đại học sư phạm
+        p.uppercase.font-bold(class="text-yellow-400 md:text-xl text-f13") Liên chi đoàn khoa toán - tin
+    .block
+      a(href="#").flex.items-center.gap-3
+        img(src=imgCommonPC+"profilepic.gif" class="w-[33px] h-[33px] rounded-full" width="33" height="33" alt="")
+        p.text-sm.font-semibold.hidden(class="sm:block") Đăng nhập
+  .flex.justify-end.bg-primary(class="sm:hidden")
+    button#menuToggle(class="sm:hidden p-2 text-white")
       svg.w-6.h-6(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
         path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16")
     div#mobileOverlay.hidden.fixed.inset-0.bg-black.bg-opacity-40.z-40
@@ -74,31 +75,20 @@ header.w-full
         span.font-semibold.text-gray-800
         button#closeMenu.text-gray-600.text-xl &times;
       nav.flex.flex-col.gap-4.p-4
-        a.text-gray-800.text-sm.p-2.rounded(href="#") Tin tức &amp; Sự kiện
-        a.text-gray-800.text-sm.p-2.rounded(href="#") Thông báo
-        a.text-gray-800.text-sm.p-2.rounded(href="#") Góc chia sẻ
-        a.text-gray-800.text-sm.p-2.rounded(href="#") Văn bản pháp luật
-        a.text-gray-800.text-sm.p-2.rounded(href="#") Lịch tuần
-  div.wrapper.flex.justify-between.items-center
-    .flex.items-center.gap-3
-      div.flex-shrink-0
-        img(src="./images/cropped-it_logo.png" class="w-[60px] md:w-auto" alt="")
-      .flex.flex-col
-        p.uppercase.font-bold(class="md:text-base text-sm") Trường đại học sư phạm
-        p.uppercase.font-bold(class="text-yellow-400 md:text-xl text-f13") Liên chi đoàn khoa toán - tin
-    .block
-      a(href="#").flex.items-center.gap-3
-        img(src="./images/profilepic.gif" class="w-[33px] h-[33px] rounded-full" width="33" height="33" alt="")
-        p.text-sm.font-semibold.hidden(class="sm:block") Đăng nhập
-  div.wrapper.hidden(class="md:block")
-    ul.flex.items-center.flex-wrap(class="lg:justify-between")
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Trang chủ
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Giới thiệu
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Đào tạo
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Khoa học – Hợp tác
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Tuyển sinh
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Sinh viên
+        a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Liên hệ
+  div.wrapper.hidden(class="sm:block")
+    ul.flex.items-center.flex-wrap
       a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Trang chủ
       a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Giới thiệu
-      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Tin tức và hoạt động
+      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Đào tạo
+      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Khoa học – Hợp tác
       a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Tuyển sinh
       a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Sinh viên
-      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Đào tạo
-      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Khoa học công nghệ
-      a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Hợp tác
       a(href="#" class="before:content-[''] before:block before:w-full before:h-[6px] before:bg-orange-500 before:transition before:duration-300 before:opacity-0 before:absolute before:bottom-0 before:left-0 hover:before:opacity-100 hover:text-orange-500 hover:border-orange-500").relative.transition.duration-300.px-2.py-3 Liên hệ
 
